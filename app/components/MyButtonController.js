@@ -45,7 +45,7 @@ class MyButtonController extends Component {
             <MyButton
                 items={this.state.items}
                 onClick={this.createNewItem.bind(this)}
-                reMove={this.delNewItem.bind(this)}
+                reMove={this.delNewItem}
                 value={this.state.value}
                 changeValue={this.changeValue.bind(this)}
             />

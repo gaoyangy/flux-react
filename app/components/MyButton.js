@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 
 class MyButton extends Component {
-
     render() {
         let items = this.props.items;
         return (
@@ -9,7 +8,7 @@ class MyButton extends Component {
                 <ul>
                     {items.map((result, key) => {
                         return (
-                            <div key={key} ref="delId">
+                            <div >
                             <button onClick={this.removeDiv.bind(this,key)}>x</button>
                             {key}---{result}
                             </div>
@@ -22,8 +21,8 @@ class MyButton extends Component {
         )
     }
     removeDiv(key,event) {
-        console.log(this,event,key)
         this.props.reMove(key)
+        console.log(this,event,key)
     }
 }
 

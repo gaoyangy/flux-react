@@ -6,7 +6,6 @@ class ListStore extends EventEmitter {
         super()
         //初始化数据
         this.items = []
-        this.text = "222"
     }
 
     //返回所有数据的方法
@@ -21,7 +20,7 @@ class ListStore extends EventEmitter {
         this.items.push(text)
     }
     removeNewItemHandler(id) {
-        this.items.splice(id-1,1)
+        this.items.splice(id,1)
     }
     //提交变化
     emitChange() {

@@ -4,16 +4,13 @@ class MyButton extends Component {
 
     render() {
         let items = this.props.items;
-        if (this.refs) {
-            console.log(this.refs.delId.key)
-        }
         return (
             <div>
                 <ul>
                     {items.map((result, key) => {
                         return (
                             <div key={key} ref="delId">
-                            <button onClick={this.props.reMove}>x</button>
+                            <button onClick={this.removeDiv.bind(this,key)}>x</button>
                             {key}---{result}
                             </div>
                         )
@@ -23,6 +20,10 @@ class MyButton extends Component {
                 <button onClick={this.props.onClick}>add New Item</button>
             </div>
         )
+    }
+    removeDiv(key,event) {
+        console.log(this,event,key)
+        this.props.reMove(key)
     }
 }
 

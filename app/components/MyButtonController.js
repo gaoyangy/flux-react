@@ -55,9 +55,9 @@ class MyButtonController extends Component {
         //调用Action发生器发出增加Item的Action
         buttonActions.addNewItem(this.state.value)
     }
-    delNewItem(event) {
+    delNewItem(key) {
         console.log(this)
-        buttonActions.removeNewItem(event.target)
+        buttonActions.removeNewItem(key)
     }
     changeValue(event) {
         this.setState({

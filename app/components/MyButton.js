@@ -8,7 +8,7 @@ class MyButton extends Component {
                 <ul>
                     {items.map((result, key) => {
                         return (
-                            <div >
+                            <div key={key}>
                             <button onClick={this.removeDiv.bind(this,key)}>x</button>
                             {key}---{result}
                             </div>
